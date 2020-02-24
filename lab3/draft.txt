@@ -1,0 +1,167 @@
+			              
+		   		  ORG 4D9
+4D9  : 04F2     | G: WORD 04F2           
+4DA  : 0004     | K: WORD 4           
+4DB  : F500     | O: WORD ?  
+				  BEGIN:	
+4DC  : F200     | CLA  
+4DD  : 44D9     | ADD 4D9      
+4DE  : 300C     | MOV C           
+4DF  : F200     | CLA           
+4E0  : 34DB     | MOV 4DB           
+4E1  : 44DA     | ADD 4DA           
+4E2  : F400     | CMA        
+4E3  : F800     | INC
+4E4  : 300D     | MOV D
+4E5  : F200     | CLA
+4E6  : 480C     | ADD 80C
+4E7  : F700     | ROR
+4E8  : 84EA     | BCS 4EA
+4E9  : C4EF     | BR 4EF
+4EA  : F600     | ROL
+4EB  : 64DB     | SUB 4DB
+4EC  : A4EF     | BMI 4EF
+4ED  : 44DB     | ADD 4DB
+4EE  : 34DB     | MOV 4DB
+4EF  : 000D	    | ISZ 00D
+4F0  : C4E5     | BR 4E5
+4F1  : F000     | HLT
+4F2  : F401     | T: WORD F401
+4F3  : F400	    | L: WORD F400
+4F4  : 44DD     | U: WORD 44DD
+4F5  : E101     | P: WORD E101
+
+B9AF
+B9AA
+3
+1
+4
+4D9 a w 04F2 w 0005 w F500 w F200 w 44D9 w 300C w F200 w 34DB w 44DA w F400 w F800 w 300D w F200 w 480C w F700 w 84EA w C4EF w F600 w 64DB w A4EF w 44DB w 34DB w 000D w C4E5 w F000 w B9AF w B9AA w 3 w 1 w 4 w 4D9 a s c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
+
+ORG 4D9
+G: WORD 04F2           
+K: WORD 5           
+O: WORD ?  
+BEGIN:	
+CLA  
+ADD 4D9      
+MOV C           
+CLA           
+MOV 4F7 #4DB           
+ADD 4DA           
+CMA        
+INC
+MOV D
+CLA
+ADD 80C
+ROR
+BCS 4EA
+BR 4EF
+ROL
+SUB 4F7 #4DB
+BMI 4EF
+ADD 4F7 #4DB
+MOV 4F7 #4DB
+ISZ 00D
+BR 4E5
+HLT
+T: WORD B9AF
+L: WORD B9AA
+U: WORD 3
+P: WORD 1
+X: WORD 4
+
+ORG 4D9
+G: WORD 04F2           
+K: WORD 5           
+O: WORD ?  
+BEGIN:	
+CLA  
+ADD 4D9      
+MOV C           
+CLA           
+MOV 4DB           
+ADD 4DA           
+CMA        
+INC
+MOV D
+CLA
+ADD (80C)
+ROR
+BCS 4EA
+BR 4EF
+ROL
+SUB 4DB
+BMI 4EF
+ADD 4DB
+MOV 4DB
+ISZ 00D
+BR 4E5
+HLT
+T: WORD B9AF
+L: WORD B9AA
+U: WORD 3
+P: WORD 1
+X: WORD 4
+
+
+4D9
+4DA
+4DB
+4DC
+4DD
+4DE
+4DF
+4E0
+4E1
+4E2
+4E3
+4E4
+4E5
+4E6
+4E7
+4E8
+4E9
+4EA
+4EB
+4EC
+4ED
+4EE
+4EF
+4F0
+4F1
+4F2
+4F3
+4F4
+4F5
+
+04F2
+0005
+F500
+F200
+44D9
+300C
+F200
+34DB
+44DA
+F400
+F800
+300D
+F200
+480C
+F700
+84EA
+C4EF
+F600
+64DB
+A4EF
+44DB
+34DB
+000D
+C4E5
+F000
+B9AF
+B9AA
+
+
+

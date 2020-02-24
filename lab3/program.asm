@@ -1,0 +1,32 @@
+ORG 4D9
+G WORD 04F2           
+K WORD 5           
+O WORD   
+BEGIN	
+CLA  
+ADD 4D9      
+MOV C           
+CLA           
+MOV 4DB           
+ADD 4DA           
+CMA        
+INC
+MOV D
+CLA
+ADD (80C)
+ROR
+BCS 4EA
+BR 4EF
+ROL
+SUB 4DB
+BMI 4EF	
+ADD 4DB
+MOV 4DB
+ISZ 00D
+BR 4E5
+HLT
+T WORD B9AF
+L WORD B9AA
+U WORD 3
+P WORD 1
+X WORD 4
