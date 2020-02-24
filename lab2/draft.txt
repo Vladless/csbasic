@@ -1,0 +1,50 @@
+	 	
+	 	
+04A: 										
+04B: 		# ACC = 10 X
+04C: 		# ACC = 10 Z
+04D: 		# N = 10 N
+04E: 		# ACC = 0 
+04F: 		# ACC = 20 Y
+050: 		# ACC = 10 N
+051: 		# F = 10 F
+052: 		
+053: 		
+054: 		
+055: 		
+056: 			
+057: 	 
+
+
+ORG 04A
+BEGIN:
+CLA			
+ADD 55 	
+AND 57 	
+MOV 54 	
+CLA 		
+ADD 56 			
+SUB 54		
+MOV 53		
+HLT		
+R: WORD ?	
+N: WORD ?	
+X: WORD FBB4
+Y: WORD 36B0
+Z: WORD D8F0
+
+
+N = Y-(Z&X)
+1111101110110100
+1101100011110000
+1101100010110000
+X 1100 = 44С, -1100  = FBB4
+Y 14000 = 36B0
+Z 10000 = 2710, -10000 = D8F0  
+
+
+049 a w F200 w 4055 w 1057 w 3054 w F200 w 4056 w 6054 w 3053 w F000 w 0000 w 0000 w FBB4 w 36B0 w D8F0 w 049 a s c c c c c c c c c c c c c c c c  
+
+
+
+
