@@ -1,0 +1,222 @@
+java -jar -Dmode=cli bcomp.jar
+
+-10911*3=32733
+10922*3=32766
+
+			ORG 4F1
+			BEGIN:				 		
+4F1: F200 	CLA						
+4F2: 3508	MOV 508					
+4F3: 4507	ADD 507					
+4F4: F800	INC						
+4F5: 265E	JSR 65E #->	(8005)->6A			
+4F6: F900	DEC						
+4F7: 4508	ADD 508					
+4F8: 3508	MOV 508					
+4F9: F200	CLA						
+4FA: 4505	ADD 505					
+4FB: 265E	JSR 65E	#-> (7FFC)->6A
+4FC: 6508	SUB 508					
+4FD: 3508	MOV 508					
+4FE: F200	CLA						
+4FF: 4506	ADD 506					
+500: F900	DEC						
+501: 265E	JSR 65E	#->	(1A)-> 18*3 - 1F = 53
+502: 6508	SUB 508					
+503: 3508	MOV 508					
+504: F000	HLT						
+505: 7FFC	Z: WORD 7FFC				
+506: 0019	Y: WORD 19				
+507: 8004	X: WORD 8004	
+508: 0000	R: WORD 0 #RESULT
+			ORG 65E
+65E: 0000	MA: WORD ?						
+65F: A66A	BMI 66A					
+660: B66A	BEQ 66A					
+661: 666E	SUB 66E					
+662: 966A	BPL 66A					
+663: 466E	ADD 66E					
+664: 366D	MOV 66D					
+665: F300	CLC						
+666: F600	ROL						
+667: 466D	ADD 66D					
+668: 666F	SUB 66F					
+669: CE5E	BR (65E)					
+66A: F200	CLA						
+66B: 466E	ADD 66E					
+66C: CE5E	BR (65E)					
+66D: 0000	SR: WORD 0 #SUBRESULT	
+66E: 006A	SX: WORD 6A #SUBX		
+66F: 001F	SY: WORD 1F #SUBY	
+
+
+
+
+ORG 4F1
+BEGIN:				 		
+CLA						
+MOV 508					
+ADD 507					
+INC						
+JSR 65E #->	(8005)->6A			
+DEC						
+ADD 508					
+MOV 508					
+CLA						
+ADD 505					
+JSR 65E	#-> (7FFC)->6A
+SUB 508					
+MOV 508					
+CLA						
+ADD 506					
+DEC						
+JSR 65E	#->	(1A)-> 18*3 - 1F = 53
+SUB 508					
+MOV 508					
+HLT						
+Z: WORD 7FFC				
+Y: WORD 19				
+X: WORD 8004	
+R: WORD 0 #RESULT
+ORG 65E
+MA: WORD ?						
+BMI 66A					
+BEQ 66A					
+SUB 66E					
+BPL 66A					
+ADD 66E					
+MOV 66D					
+CLC						
+ROL						
+ADD 66D					
+SUB 66F					
+BR (65E)					
+CLA						
+ADD 66E					
+BR (65E)					
+SR: WORD 0 #SUBRESULT	
+SX: WORD 6A #SUBX		
+SY: WORD 1F #SUBY	
+
+
+4F1
+4F2
+4F3
+4F4
+4F5
+4F6
+4F7
+4F8
+4F9
+4FA
+4FB
+4FC
+4FD
+4FE
+4FF
+500
+501
+502
+503
+504
+505
+506
+507
+508	
+65E
+65F
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+66A
+66B
+66C
+66D
+66E
+66F
+
+4F1 a  w F200  w 3508  w 4507  w F800  w 265E  w F900  w 4508  w 3508  w F200  w 4505  w 265E  w 6508  w 3508  w F200  w 4506  w F900  w 265E  w 6508  w 3508  w F000  w 7FFC  w 0019  w 8004  w 0000 w 65E a  w 0000  w A66A  w B66A  w 666E  w 966A  w 466E  w 366D  w F300  w F600  w 466D  w 666F  w CE5E  w F200  w 466E  w CE5E  w 0000  w 006A  w 001F w 4F1 a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
+
+
+
+
+ 
+ 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ORG 28C 					
+BEGIN:
+CLA
+MOV 2A2
+ADD 29F
+JSR 742
+SUB 2A2
+MOV 2A2
+CLA
+ADD 2A1
+DEC
+JSR 742
+INC
+ADD 2A2
+MOV 2A2
+CLA
+ADD 2A0
+JSR 742
+ADD 2A2
+MOV 2A2
+HLT
+ORG 742
+BEQ 745
+BPL 74E
+SUB 752
+BMI 74E
+BEQ 74E
+ADD 752
+MOV 751
+ADD 751
+ADD 751
+ADD 753
+BR(742)
+CLA
+ADD 752
+BR(742)
+				
+ 										
+										
