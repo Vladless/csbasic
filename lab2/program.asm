@@ -1,0 +1,16 @@
+ORG 04A
+BEGIN:
+CLA			
+ADD 55 	
+AND 57 	
+MOV 54 	
+CLA 		
+ADD 56 			
+SUB 54		
+MOV 53		
+HLT		
+R: WORD ?	
+N: WORD ?	
+X: WORD FBB4
+Y: WORD 36B0
+Z: WORD D8F0
